@@ -13,9 +13,5 @@ $app->get('/', function (Request $request, Response $response, $args) {
     return $response;
 });
 
-$app->get('/home.php', function (Request $request, Response $response, $args) {
-    $response->getBody()->write("Hello world!");
-    return $response;
-});
 
 $app->run();
