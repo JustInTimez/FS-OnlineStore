@@ -8,3 +8,4 @@
 - Composer
 - Slim 4 Framework
 - Slim PSR-7
+- Slim PHP-view template

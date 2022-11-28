@@ -2,6 +2,6 @@
     "require": {
         "slim/slim": "^4.11",
         "slim/psr7": "^1.6",
-        "slim/twig-view": "^3.3"
+        "slim/php-view": "^3.2"
     }
 }
