@@ -1,3 +1,3 @@
 <?php
 
-include './../partials/head.php';
+include __DIR__ . '/../partials/header.php';
