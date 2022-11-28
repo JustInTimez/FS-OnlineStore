@@ -1,28 +1,21 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
 
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Factory\AppFactory;
 use Slim\Views\PhpRenderer;
 
+require __DIR__ . './../vendor/autoload.php';
 
 
-require __DIR__ . '/../vendor/autoload.php';
 
 // Create App
 $app = AppFactory::create();
 
-
 $app->get('/', function ($request, $response, $args) {
-    $renderer = new PhpRenderer('/public/views');
+    $renderer = new PhpRenderer('views');
     return $renderer->render($response, "home.php", $args);
-});
-
-
-// $app->get('/', function (Request $request, Response $response, $args) {
-//     $response->getBody()->write("Hello world!");
-//     return $response;
-// });
-
+})->setName('home');
 
 $app->run();
+
